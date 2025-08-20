@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="80" viewBox="0 0 260 80" role="img">
+  <style>
+    :root{
+      --brand:#047857;
+      --brand-dark:#065f46;
+      --text:#0F172A;
+      --accent:#10b981;
+    }
+    .wordmark{ font: 600 22px/1.1 "Inter", system-ui, sans-serif; letter-spacing: .1px; }
+    .sub{ font: 500 14px/1.2 "Inter", system-ui, sans-serif; letter-spacing: .2px; fill:#475569;}
+  </style>
+
+  <!-- Icon: Standort-Pin + Buch (extra groß) -->
+  <g transform="translate(15,12)">
+    <!-- Pin-Grundform -->
+    <path d="M25 0c-11 0-20 8.7-20 19.1C5 30.5 19 41.7 23.9 46c.7.6 1.4.6 2.1 0 4.9-4.3 18.9-15.5 18.9-26.9C45 8.7 36 0 25 0z"
+          fill="url(#gRadCompact)" />
+    <!-- Buch-Seiten (ohne Häkchen) -->
+    <path d="M14.2 12c3.9-2 8.7-2 12.3 0 .9.5 1.4 1.1 1.4 2.1v11c-3.9-2-8.7-2-12.3 0V14.1c0-1 .6-1.9 1.1-2.1z"
+          fill="#fff"/>
+    <path d="M25.2 12c3.9-2 8.7-2 12.3 0 .9.5 1.1 1.1 1.1 2.1v11c-3.9-2-8.7-2-12.3 0V14.1c0-1 .6-1.9 1.1-2.1z"
+          fill="#E8F5F2"/>
+  </g>
+
+  <!-- Wortmarke (ohne Wappen) -->
+  <g transform="translate(75,32)">
+    <text class="wordmark" fill="var(--text)">Nachhilfeportal</text>
+    <g transform="translate(0,22)">
+      <text x="0" y="0" class="sub">Zürich</text>
+    </g>
+  </g>
+
+  <!-- Verläufe -->
+  <defs>
+    <radialGradient id="gRadCompact" cx="30%" cy="25%" r="90%">
+      <stop offset="0" stop-color="var(--brand)"/>
+      <stop offset="1" stop-color="var(--brand-dark)"/>
+    </radialGradient>
+  </defs>
+</svg>
