@@ -141,7 +141,7 @@ export default function ThreeStepSystem() {
         
         <div className="text-center">
           <button 
-            onClick={() => router.push('/kontakt')}
+            onClick={() => router.push('/standortbestimmung-anfragen')}
             className="inline-flex items-center gap-3 bg-gradient-to-r from-[#ff6b35] to-[#e55a2b] text-white px-10 py-5 rounded-[50px] hover:shadow-xl hover:scale-105 transition-all duration-300 font-bold text-lg shadow-lg"
           >
             <i className="fas fa-rocket"></i>

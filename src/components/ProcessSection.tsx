@@ -156,7 +156,7 @@ export default function ProcessSection() {
         
         <div className="process-cta text-center mt-16">
           <button 
-            onClick={() => router.push('/kontakt')}
+            onClick={() => router.push('/standortbestimmung-anfragen')}
             className="main-cta inline-flex items-center gap-3 bg-gradient-to-r from-[#ff6b35] to-[#e55a2b] text-white px-8 py-4 rounded-full hover:shadow-lg hover:transform hover:-translate-y-1 transition-all font-semibold text-lg"
           >
             <i className="fas fa-play"></i>
