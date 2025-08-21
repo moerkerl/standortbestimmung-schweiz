@@ -27,17 +27,17 @@ export default function TeamSection() {
         {/* Expert Cards */}
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Nicole Benjamin */}
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow">
-            <div className="flex flex-col md:flex-row">
-              <div className="md:w-1/3 relative h-48 md:h-auto">
+          <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
+              <div className="relative w-32 h-32 flex-shrink-0">
                 <Image
                   src="/images/Nicole_Benjamin.jpg"
                   alt="Nicole Benjamin"
                   fill
-                  className="object-cover"
+                  className="object-cover rounded-full border-4 border-[#ff6b35]"
                 />
               </div>
-              <div className="p-8 md:w-2/3">
+              <div className="text-center md:text-left">
                 <div className="inline-block bg-gradient-to-r from-[#ff6b35] to-[#e55a2b] text-white text-sm font-semibold px-4 py-1 rounded-full mb-4">
                   Primarstufe
                 </div>
@@ -51,17 +51,17 @@ export default function TeamSection() {
           </div>
           
           {/* Nadja Ritter */}
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow">
-            <div className="flex flex-col md:flex-row">
-              <div className="md:w-1/3 relative h-48 md:h-auto">
+          <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
+              <div className="relative w-32 h-32 flex-shrink-0">
                 <Image
                   src="/images/Nadja_Ritter.jpg"
                   alt="Nadja Ritter"
                   fill
-                  className="object-cover"
+                  className="object-cover rounded-full border-4 border-[#ff6b35]"
                 />
               </div>
-              <div className="p-8 md:w-2/3">
+              <div className="text-center md:text-left">
                 <div className="inline-block bg-gradient-to-r from-[#ff6b35] to-[#e55a2b] text-white text-sm font-semibold px-4 py-1 rounded-full mb-4">
                   Sekundarstufe
                 </div>
