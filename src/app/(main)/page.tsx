@@ -1,15 +1,13 @@
-import HeroSectionNew from '@/components/HeroSectionNew'
+import HeroSection from '@/components/HeroSection'
 import TrustBar from '@/components/TrustBar'
 import TrustSection from '@/components/TrustSection'
 import TargetAudienceSection from '@/components/TargetAudienceSection'
-import ThreeStepPackages from '@/components/ThreeStepPackages'
-import ProblemSection from '@/components/ProblemSection'
-import ScientificSectionExpanded from '@/components/ScientificSectionExpanded'
+import ThreeStepSystem from '@/components/ThreeStepSystem'
+import ScientificSection from '@/components/ScientificSection'
 import StrengthSection from '@/components/StrengthSection'
-import TeamSectionEnhanced from '@/components/TeamSectionEnhanced'
+import TeamSection from '@/components/TeamSection'
 import ProcessSection from '@/components/ProcessSection'
 import QualitySection from '@/components/QualitySection'
-import QualityPromiseSection from '@/components/QualityPromiseSection'
 import FAQSectionComplete from '@/components/FAQSectionComplete'
 import PartnerSection from '@/components/PartnerSection'
 import ResourceSection from '@/components/ResourceSection'
@@ -25,7 +23,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <HeroSectionNew />
+      <HeroSection />
 
       {/* Trust Bar */}
       <TrustBar />
@@ -36,20 +34,17 @@ export default function Home() {
       {/* Target Audience Section */}
       <TargetAudienceSection />
 
-      {/* Problem Section */}
-      <ProblemSection />
-      
       {/* 3-Step Success System */}
-      <ThreeStepPackages />
+      <ThreeStepSystem />
 
       {/* Scientific Foundation Section */}
-      <ScientificSectionExpanded />
+      <ScientificSection />
 
       {/* Strength-Based Approach */}
       <StrengthSection />
 
       {/* Team Section */}
-      <TeamSectionEnhanced />
+      <TeamSection />
 
       {/* Process Section */}
       <ProcessSection />
@@ -57,8 +52,6 @@ export default function Home() {
       {/* Lehrplan Quality Section */}
       <QualitySection />
       
-      {/* Quality Promise Section */}
-      <QualityPromiseSection />
 
       {/* Benefits Section */}
       <section id="vorteile" className="benefits-section py-24 bg-gray-50">

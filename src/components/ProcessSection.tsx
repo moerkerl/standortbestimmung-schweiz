@@ -79,7 +79,7 @@ export default function ProcessSection() {
               </div>
               
               {/* Content */}
-              <div className={`lg:w-5/12 ${index % 2 === 0 ? 'lg:ml-auto lg:pl-8' : 'lg:mr-auto lg:pr-8'}`}>
+              <div className={`lg:w-[48%] ${index % 2 === 0 ? 'lg:ml-auto lg:pl-4' : 'lg:mr-auto lg:pr-4'}`}>
                 <div className="step-content bg-white rounded-2xl shadow-xl p-8 relative">
                   {/* Mobile step number */}
                   <div className="lg:hidden w-12 h-12 bg-[#ff6b35] text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">
