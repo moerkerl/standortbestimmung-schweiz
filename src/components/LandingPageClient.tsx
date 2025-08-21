@@ -49,7 +49,7 @@ export default function LandingPageClient({ benefits, steps, testimonials, offer
           </>
         }
         subtitle="Wissenschaftlich fundierte Lernstandsanalyse nach Lehrplan 21 - Klarheit für die Zukunft Ihres Kindes"
-        buttonText="Jetzt Standortbestimmung anfragen"
+        buttonText="Jetzt Standortbestimmung erhalten"
         imageSrc="/zwei-gymnasiasten-statistik-analyse-esszimmer-tutorin-vertiefung-mathe-helden.jpg"
         imageAlt="Professionelle Standortbestimmung für Schweizer Schüler"
       />
@@ -67,7 +67,7 @@ export default function LandingPageClient({ benefits, steps, testimonials, offer
           'Ist mein Kind auf dem richtigen Weg?',
           'Was muss gefördert werden?'
         ]}
-        buttonText="Jetzt Standortbestimmung anfragen"
+        buttonText="Jetzt Standortbestimmung erhalten"
         imageSrc="/fuenftklaessler-mathe-niedergeschlagen-frust-schreibtisch-alleine-mathe-helden.jpg"
         imageAlt="Schüler mit Unsicherheit über den Lernstand"
         imagePosition="left"
@@ -93,7 +93,7 @@ export default function LandingPageClient({ benefits, steps, testimonials, offer
                 onClick={() => router.push('/standortbestimmung-anfragen')}
                 className="bg-[#ff6b35] text-white px-8 py-4 rounded-lg hover:bg-[#e55a2b] transition-colors font-semibold shadow-lg cursor-pointer"
               >
-                Jetzt Standortbestimmung anfragen
+                Jetzt Standortbestimmung erhalten
               </button>
             </div>
 
@@ -151,7 +151,7 @@ export default function LandingPageClient({ benefits, steps, testimonials, offer
       <LPSteps
         title="In 3 Schritten zur professionellen Standortbestimmung"
         steps={steps}
-        ctaText="Jetzt Standortbestimmung anfragen"
+        ctaText="Jetzt Standortbestimmung erhalten"
       />
 
       {/* Testimonials */}
@@ -192,7 +192,7 @@ export default function LandingPageClient({ benefits, steps, testimonials, offer
               onClick={() => router.push('/standortbestimmung-anfragen')}
               className="bg-[#ff6b35] text-white px-8 py-4 rounded-lg hover:bg-[#e55a2b] transition-colors font-semibold text-lg shadow-lg cursor-pointer"
             >
-              Jetzt Standortbestimmung anfragen
+              Jetzt Standortbestimmung erhalten
             </button>
           </div>
         </div>

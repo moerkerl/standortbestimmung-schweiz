@@ -103,7 +103,7 @@ export default function LandingPageV2Client() {
           </>
         }
         subtitle="Mit unserer professionellen Standortbestimmung erhalten Sie Klarheit über Stärken, Schwächen und die nächsten Schritte."
-        buttonText="Jetzt Standortbestimmung starten"
+        buttonText="Jetzt Standortbestimmung erhalten"
         imageSrc="/zwei-gymnasiasten-statistik-analyse-esszimmer-tutorin-vertiefung-mathe-helden.jpg"
         imageAlt="Professionelle Standortbestimmung für Ihr Kind"
       />
@@ -121,7 +121,7 @@ export default function LandingPageV2Client() {
           'Braucht es Nachhilfe oder reicht mehr Übung?',
           'Welche Stärken kann mein Kind noch besser nutzen?'
         ]}
-        buttonText="Klare Antworten erhalten"
+        buttonText="Jetzt Standortbestimmung erhalten"
         imageSrc="/fuenftklaessler-mathe-niedergeschlagen-frust-schreibtisch-alleine-mathe-helden.jpg"
         imageAlt="Eltern mit Fragen zum Lernstand"
         imagePosition="right"
@@ -189,7 +189,7 @@ export default function LandingPageV2Client() {
               onClick={() => router.push('/standortbestimmung-anfragen')}
               className="bg-[#ff6b35] text-white px-8 py-4 rounded-lg hover:bg-[#e55a2b] transition-colors font-semibold text-lg shadow-lg cursor-pointer"
             >
-              Jetzt Standortbestimmung starten
+              Jetzt Standortbestimmung erhalten
             </button>
           </div>
         </div>
@@ -294,7 +294,7 @@ export default function LandingPageV2Client() {
       <LPSteps
         title="So funktioniert die Standortbestimmung"
         steps={steps}
-        ctaText="Jetzt Standortbestimmung starten"
+        ctaText="Jetzt Standortbestimmung erhalten"
       />
 
       {/* Scientific Foundation */}
@@ -358,7 +358,7 @@ export default function LandingPageV2Client() {
               onClick={() => router.push('/standortbestimmung-anfragen')}
               className="bg-white text-[#ff6b35] px-10 py-5 rounded-lg hover:bg-gray-100 transition-colors font-bold text-lg shadow-lg transform hover:scale-105 cursor-pointer"
             >
-              Jetzt Standortbestimmung starten
+              Jetzt Standortbestimmung erhalten
             </button>
             
             <div className="flex justify-center gap-8 mt-8 text-white/90 text-sm">

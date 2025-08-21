@@ -213,7 +213,7 @@ export default function Home() {
                 </p>
                 <a href="/standortbestimmung-anfragen" className="inline-flex items-center gap-3 bg-white text-[#ff6b35] px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors">
                   <i className="fas fa-arrow-right"></i>
-                  Jetzt Beratung anfordern
+                  Jetzt Standortbestimmung erhalten
                 </a>
               </div>
             </div>
@@ -235,7 +235,7 @@ export default function Home() {
             <p className="text-xl text-gray-300 mb-10">Der erste Schritt zu gezielter Förderung und schulischem Erfolg</p>
             <a href="/standortbestimmung-anfragen" className="main-cta large inline-flex items-center gap-3 bg-gradient-to-r from-[#ff6b35] to-[#e55a2b] text-white px-10 py-5 rounded-full font-semibold text-lg hover:shadow-2xl hover:transform hover:-translate-y-1 transition-all">
               <i className="fas fa-calendar-check"></i>
-              Jetzt Termin vereinbaren
+              Jetzt Standortbestimmung erhalten
             </a>
             <div className="cta-features flex flex-wrap justify-center gap-8 mt-12">
               <div className="feature flex items-center gap-2 text-gray-300">

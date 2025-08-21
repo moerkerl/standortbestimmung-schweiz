@@ -95,7 +95,7 @@ export default function LandingPageV3Client() {
           </>
         }
         subtitle="Professionelle Standortbestimmung nach Lehrplan 21 - Von erfahrenen Pädagoginnen durchgeführt. Erhalten Sie Klarheit über Stärken, Schwächen und die nächsten Schritte."
-        buttonText="Jetzt Standortbestimmung anfragen"
+        buttonText="Jetzt Standortbestimmung erhalten"
         imageSrc="/zwei-gymnasiasten-statistik-analyse-esszimmer-tutorin-vertiefung-mathe-helden.jpg"
         imageAlt="Professionelle Standortbestimmung für Ihr Kind"
       />
@@ -117,7 +117,7 @@ export default function LandingPageV3Client() {
           'Ist mein Kind auf dem richtigen Weg für den Übertritt?',
           'Welche Stärken sollten wir gezielt fördern?'
         ]}
-        buttonText="Klarheit schaffen"
+        buttonText="Jetzt Standortbestimmung erhalten"
         imageSrc="/fuenftklaessler-mathe-niedergeschlagen-frust-schreibtisch-alleine-mathe-helden.jpg"
         imageAlt="Schüler mit Unsicherheit über den Lernstand"
         imagePosition="right"
@@ -189,7 +189,7 @@ export default function LandingPageV3Client() {
               onClick={() => router.push('/standortbestimmung-anfragen')}
               className="bg-[#ff6b35] text-white px-8 py-4 rounded-lg hover:bg-[#e55a2b] transition-colors font-semibold text-lg shadow-lg cursor-pointer"
             >
-              Jetzt Klarheit schaffen
+              Jetzt Standortbestimmung erhalten
             </button>
           </div>
         </div>
@@ -297,7 +297,7 @@ export default function LandingPageV3Client() {
       <LPSteps
         title="So funktioniert unsere Standortbestimmung"
         steps={steps}
-        ctaText="Jetzt starten"
+        ctaText="Jetzt Standortbestimmung erhalten"
       />
 
       {/* Scientific Foundation - REPLACED LPOffers */}
@@ -382,7 +382,7 @@ export default function LandingPageV3Client() {
               onClick={() => router.push('/standortbestimmung-anfragen')}
               className="bg-white text-[#ff6b35] px-10 py-5 rounded-lg hover:bg-gray-100 transition-all font-bold text-lg shadow-lg transform hover:scale-105 cursor-pointer"
             >
-              Jetzt kostenlose Erstberatung sichern
+              Jetzt Standortbestimmung erhalten
             </button>
             
             <div className="flex flex-wrap justify-center gap-6 mt-8 text-white/90 text-sm">
