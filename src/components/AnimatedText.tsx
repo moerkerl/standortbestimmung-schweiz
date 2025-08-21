@@ -87,8 +87,8 @@ export default function AnimatedText({ text, className = '', onAnimationComplete
         .animated-text-gradient {
           background: linear-gradient(
             90deg,
-            #047857 0%,
-            #047857 50%,
+            #ff6b35 0%,
+            #ff6b35 50%,
             #000000 50%,
             #000000 100%
           );
@@ -117,7 +117,7 @@ export default function AnimatedText({ text, className = '', onAnimationComplete
         }
 
         .underline-path {
-          stroke: #047857;
+          stroke: #ff6b35;
           stroke-width: 3;
           fill: none;
           stroke-dasharray: 150;
@@ -136,8 +136,8 @@ export default function AnimatedText({ text, className = '', onAnimationComplete
         @supports not (-webkit-background-clip: text) {
           .animated-text-gradient {
             background: none;
-            -webkit-text-fill-color: #047857;
-            color: #047857;
+            -webkit-text-fill-color: #ff6b35;
+            color: #ff6b35;
           }
         }
 
@@ -156,7 +156,7 @@ export default function AnimatedText({ text, className = '', onAnimationComplete
         /* Ensure text remains selectable and accessible */
         .animated-text-gradient::selection {
           background: rgba(147, 51, 234, 0.3);
-          -webkit-text-fill-color: #047857;
+          -webkit-text-fill-color: #ff6b35;
         }
       `}</style>
       

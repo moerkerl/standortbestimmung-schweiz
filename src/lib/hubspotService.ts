@@ -1,5 +1,5 @@
 /**
- * HubSpot Service for Nachhilfeportal Zürich
+ * HubSpot Service for Standortbestimmung Schweiz
  * Handles all HubSpot API interactions for contact management.
  */
 
@@ -10,8 +10,8 @@ interface HubSpotContactData {
   plz: string;
   funktion?: string;
   kontakt_hat_lead_formular_ausgefullt?: string;
-  was_fur_nachhilfe_benotigt_ihr_sohn_?: string;
-  sucht_nachhilfe_fur?: string;
+  was_fur_standortbestimmung_benotigt?: string;
+  sucht_standortbestimmung_fur?: string;
   schulstufe_kind?: string;
   utm_website_contact?: string;
   // Tracking parameters - HubSpot specific fields
@@ -279,10 +279,10 @@ export function mapPortalDataToHubSpot(data: PortalFormData): HubSpotContactData
     
     // Custom Properties für Lead Formular
     kontakt_hat_lead_formular_ausgefullt: 'Ja',
-    was_fur_nachhilfe_benotigt_ihr_sohn_: data.fach,
-    sucht_nachhilfe_fur: mapWerBrauchtNachhilfe(data.schueler),
+    was_fur_standortbestimmung_benotigt: data.fach,
+    sucht_standortbestimmung_fur: mapWerBrauchtStandortbestimmung(data.schueler),
     schulstufe_kind: data.klasse,
-    utm_website_contact: 'nachhilfeportal-zuerich.ch',
+    utm_website_contact: 'standortbestimmung-schweiz.ch',
   };
   
   // Add only the specific HubSpot tracking fields
@@ -304,7 +304,7 @@ export function mapPortalDataToHubSpot(data: PortalFormData): HubSpotContactData
 /**
  * Map schueler field to HubSpot format
  */
-function mapWerBrauchtNachhilfe(schueler: string): string {
+function mapWerBrauchtStandortbestimmung(schueler: string): string {
   const mappings: Record<string, string> = {
     'meine-tochter': 'Meine Tochter',
     'mein-sohn': 'Mein Sohn',

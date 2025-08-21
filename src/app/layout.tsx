@@ -3,16 +3,21 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 
-const inter = Inter({
+const inter = Inter({ 
   subsets: ["latin"],
-  display: 'swap',
+  variable: '--font-inter',
+  display: 'swap'
 });
 
 export const metadata: Metadata = {
-  title: "Nachhilfeportal Zürich",
-  description: "Professionelle Nachhilfe im Kanton Zürich",
+  title: "Standortbestimmung Schweiz - Professionelle Lernstandsanalyse",
+  description: "Wissenschaftlich fundierte Standortbestimmung für Schweizer Schüler (4-15 Jahre). Lehrplan 21 konform. Klarheit über den Lernstand Ihres Kindes.",
   icons: {
-    icon: '/logo-compact.svg',
+    icon: [
+      { url: '/icon', sizes: '32x32', type: 'image/png' },
+    ],
+    shortcut: '/icon',
+    apple: '/icon',
   },
 };
 
@@ -22,8 +27,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de" className="scroll-smooth">
-      <body className={inter.className}>
+    <html lang="de">
+      <body className={`${inter.variable} font-sans`}>
         <GoogleAnalytics />
         {children}
       </body>

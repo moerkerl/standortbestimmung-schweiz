@@ -4,7 +4,7 @@ import Script from 'next/script';
 import { useEffect } from 'react';
 import { initializeTracking } from '@/lib/tracking';
 
-const GA_ADS_ID = 'AW-17483108923'; // Google Ads ID für nachhilfeportal-zuerich
+const GA_ADS_ID = 'AW-17312546230'; // Google Ads ID für standortbestimmung-schweiz
 
 export default function GoogleAnalytics() {
   useEffect(() => {

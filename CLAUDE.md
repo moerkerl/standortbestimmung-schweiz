@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Information
 
-This is a tutoring landing page for Zürich built with Next.js 15, TypeScript, and Tailwind CSS. It focuses on lead generation for tutoring services in the Canton of Zürich.
+This is a professional assessment landing page for Switzerland built with Next.js 15, TypeScript, and Tailwind CSS. It focuses on lead generation for educational assessments (Standortbestimmung) for Swiss students aged 4-15 years.
 
 ## Communication Guidelines
 
@@ -21,7 +21,7 @@ You are inside a WSL instance. Liam tests the app usually inside a powershell te
 - Follow existing code patterns and styling conventions
 - Use consistent component naming (LP* prefix for Landing Page components)
 - Maintain responsive design patterns established in the codebase
-- All colors should use the established design system (#047857 primary, grays, etc.)
+- All colors should use the established design system (#ff6b35 primary orange, #e55a2b hover orange, grays, etc.)
 - Icons should be SVG-based or emoji-based to maintain lightweight bundle
 
 ## TypeScript Guidelines
@@ -133,20 +133,20 @@ You are inside a WSL instance. Liam tests the app usually inside a powershell te
 
 ## Brand Guidelines
 
-**Nachhilfeportal Zürich Branding**:
-- Primary Color: #047857 (green-700)
-- Hover Color: #065f46 (green-800)
-- Focus: Canton Zürich and surrounding areas
-- CTA Text: "Jetzt Tutor in Zürich finden"
+**Standortbestimmung Schweiz Branding**:
+- Primary Color: #ff6b35 (orange-500)
+- Hover Color: #e55a2b (orange-600)
+- Focus: Switzerland-wide educational assessments
+- CTA Text: "Jetzt Standortbestimmung anfragen"
 - Company: Bildungsinstitut Fokus AG
-- Contact: 078 314 62 65, dantico@fokus-nachhilfe.ch
+- Website: standortbestimmung-schweiz.ch
 
 **Content Strategy**:
-- Zürich-specific messaging and location references
-- Benefits-focused copy (home tutoring, all ages, qualified teachers)
-- Problem-solution narrative structure
+- Switzerland-wide educational assessment messaging
+- Benefits-focused copy (Lehrplan 21 compliance, expert analysis, clear recommendations)
+- Problem-solution narrative structure (uncertainty → clarity → action)
 - Social proof through testimonials
-- Clear 3-step process explanation
+- Clear 3-step assessment process explanation
 
 ## Deployment & Environment
 

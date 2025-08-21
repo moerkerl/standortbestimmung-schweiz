@@ -14,7 +14,7 @@ export default function Icon() {
       <div
         style={{
           fontSize: 24,
-          background: 'linear-gradient(135deg, #047857 0%, #065f46 100%)',
+          background: 'linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%)',
           width: '100%',
           height: '100%',
           display: 'flex',
@@ -34,7 +34,7 @@ export default function Icon() {
             transform: 'translateX(-50%)',
             width: '28px',
             height: '28px',
-            background: 'radial-gradient(circle at 30% 25%, #047857 0%, #065f46 100%)',
+            background: 'radial-gradient(circle at 30% 25%, #ff6b35 0%, #e55a2b 100%)',
             borderRadius: '50% 50% 50% 50% / 60% 60% 40% 40%',
             display: 'flex',
             alignItems: 'center',
@@ -50,6 +50,7 @@ export default function Icon() {
               borderRadius: '1px',
               position: 'relative',
               opacity: 0.95,
+              display: 'flex',
             }}
           >
             <div
@@ -59,7 +60,7 @@ export default function Icon() {
                 top: '0',
                 width: '1px',
                 height: '12px',
-                background: '#047857',
+                background: '#ff6b35',
                 opacity: 0.3,
               }}
             />

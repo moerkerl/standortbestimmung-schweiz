@@ -12,9 +12,9 @@ export default function DankePage() {
           {/* Animated Success Icon */}
           <div className="flex justify-center mb-8">
             <div className="relative">
-              <div className="w-32 h-32 bg-green-100 rounded-full flex items-center justify-center animate-pulse">
+              <div className="w-32 h-32 bg-orange-100 rounded-full flex items-center justify-center animate-pulse">
                 <svg 
-                  className="w-16 h-16 text-green-600" 
+                  className="w-16 h-16 text-orange-600" 
                   fill="none" 
                   stroke="currentColor" 
                   viewBox="0 0 24 24"
@@ -29,8 +29,8 @@ export default function DankePage() {
               </div>
               <div className="absolute -top-2 -right-2">
                 <span className="flex h-8 w-8">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-8 w-8 bg-green-500"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-8 w-8 bg-orange-500"></span>
                 </span>
               </div>
             </div>
@@ -43,7 +43,7 @@ export default function DankePage() {
           
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-4">
             Wir haben Ihre Anfrage erhalten und werden uns innerhalb von{' '}
-            <span className="text-[#047857] font-bold">24 Stunden</span> bei Ihnen melden.
+            <span className="text-[#ff6b35] font-bold">24 Stunden</span> bei Ihnen melden.
           </p>
           
           <p className="text-lg text-gray-500">
@@ -82,7 +82,7 @@ export default function DankePage() {
               <p className="text-sm text-gray-600">Vorstellung von 2-3 qualifizierten Nachhilfelehrern aus Zürich</p>
             </div>
             <div className="text-center">
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🎯</span>
               </div>
               <h3 className="font-semibold mb-2">Schritt 4</h3>
@@ -100,8 +100,8 @@ export default function DankePage() {
             </h2>
             <div className="space-y-4">
               <div className="flex items-start">
-                <div className="bg-green-100 rounded-full p-2 mr-3 mt-1">
-                  <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                <div className="bg-orange-100 rounded-full p-2 mr-3 mt-1">
+                  <svg className="w-4 h-4 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </div>
@@ -111,8 +111,8 @@ export default function DankePage() {
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="bg-green-100 rounded-full p-2 mr-3 mt-1">
-                  <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                <div className="bg-orange-100 rounded-full p-2 mr-3 mt-1">
+                  <svg className="w-4 h-4 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </div>
@@ -122,8 +122,8 @@ export default function DankePage() {
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="bg-green-100 rounded-full p-2 mr-3 mt-1">
-                  <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                <div className="bg-orange-100 rounded-full p-2 mr-3 mt-1">
+                  <svg className="w-4 h-4 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </div>
@@ -133,8 +133,8 @@ export default function DankePage() {
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="bg-green-100 rounded-full p-2 mr-3 mt-1">
-                  <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                <div className="bg-orange-100 rounded-full p-2 mr-3 mt-1">
+                  <svg className="w-4 h-4 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </div>
@@ -147,7 +147,7 @@ export default function DankePage() {
           </div>
 
           {/* Success Stats */}
-          <div className="bg-gradient-to-br from-[#047857] to-[#065f46] rounded-2xl shadow-lg p-8 text-white">
+          <div className="bg-gradient-to-br from-[#ff6b35] to-[#e55a2b] rounded-2xl shadow-lg p-8 text-white">
             <h2 className="text-2xl font-bold mb-6">
               Unsere Erfolge in Zürich sprechen für sich
             </h2>
@@ -191,7 +191,7 @@ export default function DankePage() {
               <div className="bg-white rounded-lg p-6">
                 <div className="text-3xl mb-3">📞</div>
                 <h3 className="font-semibold mb-2">Telefonisch</h3>
-                <a href="tel:+41783146265" className="text-[#047857] font-bold text-lg hover:text-[#010583]">
+                <a href="tel:+41783146265" className="text-[#ff6b35] font-bold text-lg hover:text-[#cc5228]">
                   078 314 62 65
                 </a>
                 <p className="text-sm text-gray-500 mt-1">Mo-Fr: 8:00-18:00 Uhr</p>
@@ -199,7 +199,7 @@ export default function DankePage() {
               <div className="bg-white rounded-lg p-6">
                 <div className="text-3xl mb-3">✉️</div>
                 <h3 className="font-semibold mb-2">Per E-Mail</h3>
-                <a href="mailto:dantico@fokus-nachhilfe.ch" className="text-[#047857] font-bold hover:text-[#010583]">
+                <a href="mailto:dantico@fokus-nachhilfe.ch" className="text-[#ff6b35] font-bold hover:text-[#cc5228]">
                   dantico@fokus-nachhilfe.ch
                 </a>
                 <p className="text-sm text-gray-500 mt-1">Antwort innerhalb 24h</p>
@@ -216,7 +216,7 @@ export default function DankePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/"
-              className="px-8 py-4 bg-[#047857] text-white font-semibold rounded-lg hover:bg-[#065f46] transition-colors text-center shadow-lg"
+              className="px-8 py-4 bg-[#ff6b35] text-white font-semibold rounded-lg hover:bg-[#e55a2b] transition-colors text-center shadow-lg"
             >
               Zur Startseite
             </Link>

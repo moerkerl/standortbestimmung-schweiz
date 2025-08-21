@@ -1,5 +1,5 @@
-// Simplified tracking utilities for nachhilfeportal-zuerich
-// Based on schweizer-nachhilfeportal implementation
+// Simplified tracking utilities for standortbestimmung-schweiz
+// Based on standortbestimmung tracking implementation
 
 interface TrackingParams {
   gclid?: string;

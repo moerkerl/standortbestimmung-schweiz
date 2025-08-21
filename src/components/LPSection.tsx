@@ -32,7 +32,7 @@ export default function LPSection({
     if (onButtonClick) {
       onButtonClick()
     } else if (buttonText) {
-      router.push('/lehrer-finden')
+      router.push('/standortbestimmung-anfragen')
     }
   }
 
@@ -61,7 +61,7 @@ export default function LPSection({
       {buttonText && (
         <button 
           onClick={handleClick}
-          className="bg-[#047857] text-white px-8 py-4 rounded-lg hover:bg-[#065f46] transition-colors font-semibold shadow-lg cursor-pointer"
+          className="bg-[#ff6b35] text-white px-8 py-4 rounded-lg hover:bg-[#e55a2b] transition-colors font-semibold shadow-lg cursor-pointer"
         >
           {buttonText}
         </button>

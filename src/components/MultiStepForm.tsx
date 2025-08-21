@@ -35,16 +35,16 @@ const klassenOptions = [
 
 const nachhilfeBeispiele = [
   'Mathematik',
-  'Französisch',
+  'Französisch', 
   'Deutsch',
   'Englisch',
-  'Hausaufgabenhilfe',
-  'Prüfungsvorbereitung'
+  'Naturwissenschaften',
+  'Alle Fächer'
 ]
 
 const initialState = {
   schueler: '',
-  klasse: '',
+  alter: '',
   fach: '',
   plz: '',
   nachname: '',
@@ -69,7 +69,7 @@ export default function MultiStepForm() {
     setForm({ ...form, [name]: value })
     
     // Auto-advance for class selection
-    if (name === 'klasse' && value && step === 2) {
+    if (name === 'alter' && value && step === 2) {
       setTimeout(() => {
         setError('')
         setStep(step + 1)
@@ -99,7 +99,7 @@ export default function MultiStepForm() {
     
     // Validierung je Schritt
     if (step === 1 && !form.schueler) return setError('Bitte wählen Sie eine Option.')
-    if (step === 2 && !form.klasse) return setError('Bitte wählen oder geben Sie eine Klasse an.')
+    if (step === 2 && !form.alter) return setError('Bitte wählen oder geben Sie das Alter/Klasse an.')
     if (step === 3 && !form.fach) return setError('Bitte geben Sie das Nachhilfefach an.')
     if (step === 4 && !form.plz) return setError('Bitte geben Sie Ihre Postleitzahl an.')
     
@@ -157,12 +157,12 @@ export default function MultiStepForm() {
       {step <= 5 && (
         <div className="mb-8">
           <div className="flex justify-between items-center mb-4">
-            <div className="text-[#047857] font-semibold">Frage {step} von 5</div>
+            <div className="text-[#ff6b35] font-semibold">Frage {step} von 5</div>
             <div className="text-gray-500 text-sm">{Math.round((step / 5) * 100)}% abgeschlossen</div>
           </div>
           <div className="w-full bg-gray-200 rounded-full h-2">
             <div 
-              className="bg-[#047857] h-2 rounded-full transition-all duration-300"
+              className="bg-[#ff6b35] h-2 rounded-full transition-all duration-300"
               style={{ width: `${(step / 5) * 100}%` }}
             />
           </div>
@@ -182,7 +182,7 @@ export default function MultiStepForm() {
                 type="button"
                 className={`border-2 rounded-lg px-6 py-4 text-left transition-all font-medium cursor-pointer ${
                   form.schueler === option.toLowerCase().replace(' ', '-')
-                    ? 'border-[#047857] bg-blue-50 text-[#010583]'
+                    ? 'border-[#ff6b35] bg-blue-50 text-[#cc5228]'
                     : 'border-gray-300 hover:border-blue-400 text-gray-700'
                 }`}
                 onClick={() => handleSelectWithAutoAdvance('schueler', option.toLowerCase().replace(' ', '-'))}
@@ -196,7 +196,7 @@ export default function MultiStepForm() {
             <div />
             <button 
               type="submit" 
-              className="bg-[#047857] text-white px-8 py-3 rounded-lg hover:bg-[#065f46] transition-colors font-semibold cursor-pointer"
+              className="bg-[#ff6b35] text-white px-8 py-3 rounded-lg hover:bg-[#e55a2b] transition-colors font-semibold cursor-pointer"
             >
               Weiter
             </button>
@@ -215,10 +215,10 @@ export default function MultiStepForm() {
             }?
           </h2>
           <select 
-            name="klasse" 
-            value={form.klasse} 
+            name="alter" 
+            value={form.alter} 
             onChange={handleChangeWithAutoAdvance}
-            className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[#047857] focus:outline-none text-gray-700"
+            className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[#ff6b35] focus:outline-none text-gray-700"
           >
             <option value="">Bitte wählen...</option>
             {klassenOptions.map(opt => (
@@ -229,14 +229,14 @@ export default function MultiStepForm() {
           <div className="flex justify-between mt-8">
             <button 
               type="button" 
-              className="text-[#047857] hover:text-[#010583] font-medium cursor-pointer"
+              className="text-[#ff6b35] hover:text-[#cc5228] font-medium cursor-pointer"
               onClick={handleBack}
             >
               ← Zurück
             </button>
             <button 
               type="submit" 
-              className="bg-[#047857] text-white px-8 py-3 rounded-lg hover:bg-[#065f46] transition-colors font-semibold cursor-pointer"
+              className="bg-[#ff6b35] text-white px-8 py-3 rounded-lg hover:bg-[#e55a2b] transition-colors font-semibold cursor-pointer"
             >
               Weiter
             </button>
@@ -255,7 +255,7 @@ export default function MultiStepForm() {
             name="fach" 
             value={form.fach} 
             onChange={handleChange}
-            className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[#047857] focus:outline-none text-gray-700 mb-4"
+            className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[#ff6b35] focus:outline-none text-gray-700 mb-4"
             placeholder="Fach eingeben..."
           />
           
@@ -268,7 +268,7 @@ export default function MultiStepForm() {
                   type="button"
                   className={`border-2 rounded-lg px-4 py-2 text-sm transition-all cursor-pointer ${
                     form.fach === fach
-                      ? 'border-[#047857] bg-blue-50 text-[#010583]'
+                      ? 'border-[#ff6b35] bg-blue-50 text-[#cc5228]'
                       : 'border-gray-300 hover:border-blue-400 text-gray-700'
                   }`}
                   onClick={() => setForm({ ...form, fach })}
@@ -283,14 +283,14 @@ export default function MultiStepForm() {
           <div className="flex justify-between mt-8">
             <button 
               type="button" 
-              className="text-[#047857] hover:text-[#010583] font-medium cursor-pointer"
+              className="text-[#ff6b35] hover:text-[#cc5228] font-medium cursor-pointer"
               onClick={handleBack}
             >
               ← Zurück
             </button>
             <button 
               type="submit" 
-              className="bg-[#047857] text-white px-8 py-3 rounded-lg hover:bg-[#065f46] transition-colors font-semibold cursor-pointer"
+              className="bg-[#ff6b35] text-white px-8 py-3 rounded-lg hover:bg-[#e55a2b] transition-colors font-semibold cursor-pointer"
             >
               Weiter
             </button>
@@ -309,7 +309,7 @@ export default function MultiStepForm() {
             name="plz" 
             value={form.plz} 
             onChange={handleChangeWithAutoAdvance}
-            className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[#047857] focus:outline-none text-gray-700"
+            className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[#ff6b35] focus:outline-none text-gray-700"
             placeholder="PLZ eingeben..."
             maxLength={4}
           />
@@ -317,14 +317,14 @@ export default function MultiStepForm() {
           <div className="flex justify-between mt-8">
             <button 
               type="button" 
-              className="text-[#047857] hover:text-[#010583] font-medium cursor-pointer"
+              className="text-[#ff6b35] hover:text-[#cc5228] font-medium cursor-pointer"
               onClick={handleBack}
             >
               ← Zurück
             </button>
             <button 
               type="submit" 
-              className="bg-[#047857] text-white px-8 py-3 rounded-lg hover:bg-[#065f46] transition-colors font-semibold cursor-pointer"
+              className="bg-[#ff6b35] text-white px-8 py-3 rounded-lg hover:bg-[#e55a2b] transition-colors font-semibold cursor-pointer"
             >
               Weiter
             </button>
@@ -349,7 +349,7 @@ export default function MultiStepForm() {
                 name="nachname" 
                 value={form.nachname} 
                 onChange={handleChange}
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[#047857] focus:outline-none text-gray-700"
+                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[#ff6b35] focus:outline-none text-gray-700"
                 placeholder="Ihr Nachname"
                 required
               />
@@ -361,7 +361,7 @@ export default function MultiStepForm() {
                 name="telefon" 
                 value={form.telefon} 
                 onChange={handleChange}
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[#047857] focus:outline-none text-gray-700"
+                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[#ff6b35] focus:outline-none text-gray-700"
                 placeholder="+41 79 XXX XX XX"
                 required
               />
@@ -373,7 +373,7 @@ export default function MultiStepForm() {
                 name="email" 
                 value={form.email} 
                 onChange={handleChange}
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[#047857] focus:outline-none text-gray-700"
+                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[#ff6b35] focus:outline-none text-gray-700"
                 placeholder="ihre@email.ch"
                 type="email"
                 required
@@ -386,7 +386,7 @@ export default function MultiStepForm() {
           <div className="flex justify-between mt-8">
             <button 
               type="button" 
-              className="text-[#047857] hover:text-[#010583] font-medium cursor-pointer"
+              className="text-[#ff6b35] hover:text-[#cc5228] font-medium cursor-pointer"
               onClick={handleBack}
               disabled={loading}
             >
@@ -394,7 +394,7 @@ export default function MultiStepForm() {
             </button>
             <button 
               type="submit" 
-              className="bg-[#047857] text-white px-8 py-3 rounded-lg hover:bg-[#065f46] transition-colors font-semibold disabled:opacity-50 cursor-pointer"
+              className="bg-[#ff6b35] text-white px-8 py-3 rounded-lg hover:bg-[#e55a2b] transition-colors font-semibold disabled:opacity-50 cursor-pointer"
               disabled={loading}
             >
               {loading ? 'Wird gesendet...' : 'Anfrage senden'}

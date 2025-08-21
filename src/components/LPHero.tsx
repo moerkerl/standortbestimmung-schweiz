@@ -30,7 +30,7 @@ export default function LPHero({
       onButtonClick()
     } else {
       // Navigate to form page
-      router.push('/lehrer-finden')
+      router.push('/standortbestimmung-anfragen')
     }
   }
 
@@ -111,10 +111,10 @@ export default function LPHero({
                 <button 
                   onClick={handleClick}
                   className={`
-                    bg-[#047857] text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg
-                    hover:bg-[#065f46] hover:shadow-xl transform hover:-translate-y-0.5 
+                    bg-[#ff6b35] text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg
+                    hover:bg-[#e55a2b] hover:shadow-xl transform hover:-translate-y-0.5 
                     transition-all cursor-pointer
-                    ${shouldHighlight ? 'button-highlight ring-2 ring-blue-400 ring-opacity-50' : ''}
+                    ${shouldHighlight ? 'button-highlight ring-2 ring-orange-400 ring-opacity-50' : ''}
                   `}
                 >
                   {buttonText}
