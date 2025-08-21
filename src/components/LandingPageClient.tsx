@@ -50,7 +50,7 @@ export default function LandingPageClient({ benefits, steps, testimonials, offer
         }
         subtitle="Wissenschaftlich fundierte Lernstandsanalyse nach Lehrplan 21 - Klarheit für die Zukunft Ihres Kindes"
         buttonText="Jetzt Standortbestimmung anfragen"
-        imageSrc="/images/hero-standortbestimmung.jpg"
+        imageSrc="/zwei-gymnasiasten-statistik-analyse-esszimmer-tutorin-vertiefung-mathe-helden.jpg"
         imageAlt="Professionelle Standortbestimmung für Schweizer Schüler"
       />
 

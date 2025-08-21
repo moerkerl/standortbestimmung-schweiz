@@ -104,7 +104,7 @@ export default function LandingPageV2Client() {
         }
         subtitle="Mit unserer professionellen Standortbestimmung erhalten Sie Klarheit über Stärken, Schwächen und die nächsten Schritte."
         buttonText="Jetzt Standortbestimmung starten"
-        imageSrc="/images/hero-standortbestimmung.jpg"
+        imageSrc="/zwei-gymnasiasten-statistik-analyse-esszimmer-tutorin-vertiefung-mathe-helden.jpg"
         imageAlt="Professionelle Standortbestimmung für Ihr Kind"
       />
 
