@@ -169,7 +169,9 @@ export default function ResourceSection() {
 
   const visibleResources = showMore 
     ? filteredResources 
-    : filteredResources.filter(r => r.alwaysVisible)
+    : filter === 'all' 
+      ? filteredResources.filter(r => r.alwaysVisible)
+      : filteredResources
 
   return (
     <section id="ressourcen" className="resources-section py-24 bg-white">
@@ -186,7 +188,7 @@ export default function ResourceSection() {
           <div className="resources-filter flex justify-center gap-4 mb-12">
             <button 
               onClick={() => setFilter('all')}
-              className={`filter-btn inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all ${
+              className={`filter-btn inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all cursor-pointer ${
                 filter === 'all' 
                   ? 'bg-[#ff6b35] text-white shadow-lg' 
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -197,7 +199,7 @@ export default function ResourceSection() {
             </button>
             <button 
               onClick={() => setFilter('standortbestimmung')}
-              className={`filter-btn inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all ${
+              className={`filter-btn inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all cursor-pointer ${
                 filter === 'standortbestimmung' 
                   ? 'bg-[#ff6b35] text-white shadow-lg' 
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -208,7 +210,7 @@ export default function ResourceSection() {
             </button>
             <button 
               onClick={() => setFilter('allgemein')}
-              className={`filter-btn inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all ${
+              className={`filter-btn inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all cursor-pointer ${
                 filter === 'allgemein' 
                   ? 'bg-[#ff6b35] text-white shadow-lg' 
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -252,7 +254,7 @@ export default function ResourceSection() {
             <div className="text-center mt-12">
               <button 
                 onClick={() => setShowMore(!showMore)}
-                className="resources-toggle-btn inline-flex items-center gap-3 px-8 py-4 bg-gray-100 hover:bg-gray-200 rounded-full font-semibold text-gray-700 transition-all"
+                className="resources-toggle-btn inline-flex items-center gap-3 px-8 py-4 bg-gray-100 hover:bg-gray-200 rounded-full font-semibold text-gray-700 transition-all cursor-pointer"
               >
                 {showMore ? (
                   <>
