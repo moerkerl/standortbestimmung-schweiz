@@ -9,6 +9,7 @@ interface HubSpotContactData {
   phone: string;
   funktion?: string;
   kontakt_hat_lead_formular_ausgefullt?: string;
+  fur_was_nachhilfe_?: string;
   sucht_standortbestimmung_fur?: string;
   schulstufe_kind?: string;
   utm_website_contact?: string;
@@ -274,6 +275,7 @@ export function mapPortalDataToHubSpot(data: PortalFormData): HubSpotContactData
     
     // Custom Properties für Lead Formular
     kontakt_hat_lead_formular_ausgefullt: 'Ja',
+    fur_was_nachhilfe_: 'Standortbestimmung',
     sucht_standortbestimmung_fur: mapWerBrauchtStandortbestimmung(data.schueler),
     schulstufe_kind: data.alter,
     utm_website_contact: 'standortbestimmung-schweiz.ch',
