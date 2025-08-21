@@ -89,8 +89,8 @@ export default function ProcessSection() {
                   {/* Icon - position based on side */}
                   <div className={`step-icon absolute -top-5 w-12 h-12 bg-[#ff6b35] text-white rounded-full flex items-center justify-center ${
                     index % 2 === 0 
-                      ? '-left-5 lg:-left-5' // Box is on right side -> icon on left
-                      : '-left-5 lg:-right-5' // Box is on left side -> icon on right (mobile still left)
+                      ? '-left-5' // Box is on right side -> icon on left (both mobile and desktop)
+                      : '-left-5 lg:left-auto lg:-right-5' // Box is on left side -> icon on right (desktop only), left on mobile
                   }`}>
                     <i className={`fas ${step.icon}`}></i>
                   </div>
