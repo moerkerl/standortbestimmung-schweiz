@@ -171,7 +171,7 @@ export default function ResourceSection() {
     ? filteredResources 
     : filter === 'all' 
       ? filteredResources.filter(r => r.alwaysVisible)
-      : filteredResources
+      : filteredResources.slice(0, 6)
 
   return (
     <section id="ressourcen" className="resources-section py-24 bg-white">
@@ -250,7 +250,8 @@ export default function ResourceSection() {
           </div>
 
           {/* Show More Button */}
-          {filteredResources.length > filteredResources.filter(r => r.alwaysVisible).length && (
+          {((filter === 'all' && filteredResources.length > filteredResources.filter(r => r.alwaysVisible).length) || 
+            (filter !== 'all' && filteredResources.length > 6)) && (
             <div className="text-center mt-12">
               <button 
                 onClick={() => setShowMore(!showMore)}
