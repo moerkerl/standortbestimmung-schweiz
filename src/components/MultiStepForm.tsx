@@ -33,20 +33,9 @@ const klassenOptions = [
   'Universität'
 ]
 
-const nachhilfeBeispiele = [
-  'Mathematik',
-  'Französisch', 
-  'Deutsch',
-  'Englisch',
-  'Naturwissenschaften',
-  'Alle Fächer'
-]
-
 const initialState = {
   schueler: '',
   alter: '',
-  fach: '',
-  plz: '',
   nachname: '',
   telefon: '',
   email: ''
@@ -76,13 +65,6 @@ export default function MultiStepForm() {
       }, 300)
     }
     
-    // Auto-advance for PLZ when 4 characters are entered
-    if (name === 'plz' && value.length === 4 && step === 4) {
-      setTimeout(() => {
-        setError('')
-        setStep(step + 1)
-      }, 300)
-    }
   }
 
   const handleSelectWithAutoAdvance = (name: string, value: string) => {
@@ -100,8 +82,6 @@ export default function MultiStepForm() {
     // Validierung je Schritt
     if (step === 1 && !form.schueler) return setError('Bitte wählen Sie eine Option.')
     if (step === 2 && !form.alter) return setError('Bitte wählen oder geben Sie das Alter/Klasse an.')
-    if (step === 3 && !form.fach) return setError('Bitte geben Sie das Nachhilfefach an.')
-    if (step === 4 && !form.plz) return setError('Bitte geben Sie Ihre Postleitzahl an.')
     
     setStep(step + 1)
   }
@@ -154,16 +134,16 @@ export default function MultiStepForm() {
   return (
     <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg p-8">
       {/* Progress indicator */}
-      {step <= 5 && (
+      {step <= 3 && (
         <div className="mb-8">
           <div className="flex justify-between items-center mb-4">
-            <div className="text-[#ff6b35] font-semibold">Frage {step} von 5</div>
-            <div className="text-gray-500 text-sm">{Math.round((step / 5) * 100)}% abgeschlossen</div>
+            <div className="text-[#ff6b35] font-semibold">Frage {step} von 3</div>
+            <div className="text-gray-500 text-sm">{Math.round((step / 3) * 100)}% abgeschlossen</div>
           </div>
           <div className="w-full bg-gray-200 rounded-full h-2">
             <div 
               className="bg-[#ff6b35] h-2 rounded-full transition-all duration-300"
-              style={{ width: `${(step / 5) * 100}%` }}
+              style={{ width: `${(step / 3) * 100}%` }}
             />
           </div>
         </div>
@@ -244,102 +224,15 @@ export default function MultiStepForm() {
         </form>
       )}
 
-      {/* Step 3: Fach */}
+
+      {/* Step 3: Kontaktdaten */}
       {step === 3 && (
-        <form onSubmit={handleNext}>
-          <h2 className="text-2xl font-bold mb-6 text-gray-900">
-            Was für Nachhilfe wird benötigt?
-          </h2>
-          
-          <input 
-            name="fach" 
-            value={form.fach} 
-            onChange={handleChange}
-            className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[#ff6b35] focus:outline-none text-gray-700 mb-4"
-            placeholder="Fach eingeben..."
-          />
-          
-          <div className="mb-4">
-            <p className="text-sm text-gray-600 mb-3">Oder wählen Sie aus beliebten Optionen:</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-              {nachhilfeBeispiele.map(fach => (
-                <button
-                  key={fach}
-                  type="button"
-                  className={`border-2 rounded-lg px-4 py-2 text-sm transition-all cursor-pointer ${
-                    form.fach === fach
-                      ? 'border-[#ff6b35] bg-blue-50 text-[#cc5228]'
-                      : 'border-gray-300 hover:border-blue-400 text-gray-700'
-                  }`}
-                  onClick={() => setForm({ ...form, fach })}
-                >
-                  {fach}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {error && <div className="text-red-500 mt-2">{error}</div>}
-          <div className="flex justify-between mt-8">
-            <button 
-              type="button" 
-              className="text-[#ff6b35] hover:text-[#cc5228] font-medium cursor-pointer"
-              onClick={handleBack}
-            >
-              ← Zurück
-            </button>
-            <button 
-              type="submit" 
-              className="bg-[#ff6b35] text-white px-8 py-3 rounded-lg hover:bg-[#e55a2b] transition-colors font-semibold cursor-pointer"
-            >
-              Weiter
-            </button>
-          </div>
-        </form>
-      )}
-
-      {/* Step 4: PLZ */}
-      {step === 4 && (
-        <form onSubmit={handleNext}>
-          <h2 className="text-2xl font-bold mb-6 text-gray-900">
-            Wo wohnen Sie?
-          </h2>
-          <label className="block text-gray-700 mb-2">Postleitzahl</label>
-          <input 
-            name="plz" 
-            value={form.plz} 
-            onChange={handleChangeWithAutoAdvance}
-            className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[#ff6b35] focus:outline-none text-gray-700"
-            placeholder="PLZ eingeben..."
-            maxLength={4}
-          />
-          {error && <div className="text-red-500 mt-2">{error}</div>}
-          <div className="flex justify-between mt-8">
-            <button 
-              type="button" 
-              className="text-[#ff6b35] hover:text-[#cc5228] font-medium cursor-pointer"
-              onClick={handleBack}
-            >
-              ← Zurück
-            </button>
-            <button 
-              type="submit" 
-              className="bg-[#ff6b35] text-white px-8 py-3 rounded-lg hover:bg-[#e55a2b] transition-colors font-semibold cursor-pointer"
-            >
-              Weiter
-            </button>
-          </div>
-        </form>
-      )}
-
-      {/* Step 5: Kontaktdaten */}
-      {step === 5 && (
         <form onSubmit={handleSubmit}>
           <h2 className="text-2xl font-bold mb-6 text-gray-900">
             Ihre Kontaktdaten
           </h2>
           <p className="text-gray-600 mb-6">
-            Damit wir Ihnen die passende Auswahl an Nachhilfelehrern in Zürich zusenden können.
+            Damit wir Ihnen schnellstmöglich eine kostenlose Beratung anbieten können.
           </p>
           
           <div className="space-y-4">

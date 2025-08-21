@@ -7,10 +7,8 @@ interface HubSpotContactData {
   email: string;
   lastname: string;
   phone: string;
-  plz: string;
   funktion?: string;
   kontakt_hat_lead_formular_ausgefullt?: string;
-  was_fur_standortbestimmung_benotigt?: string;
   sucht_standortbestimmung_fur?: string;
   schulstufe_kind?: string;
   utm_website_contact?: string;
@@ -31,9 +29,7 @@ interface HubSpotAPIResponse {
 
 interface PortalFormData {
   schueler: string;
-  klasse: string;
-  fach: string;
-  plz: string;
+  alter: string;
   nachname: string;
   telefon: string;
   email: string;
@@ -274,14 +270,12 @@ export function mapPortalDataToHubSpot(data: PortalFormData): HubSpotContactData
     email: data.email,
     lastname: data.nachname,
     phone: data.telefon,
-    plz: data.plz,
     funktion: 'Kunde / Schüler',
     
     // Custom Properties für Lead Formular
     kontakt_hat_lead_formular_ausgefullt: 'Ja',
-    was_fur_standortbestimmung_benotigt: data.fach,
     sucht_standortbestimmung_fur: mapWerBrauchtStandortbestimmung(data.schueler),
-    schulstufe_kind: data.klasse,
+    schulstufe_kind: data.alter,
     utm_website_contact: 'standortbestimmung-schweiz.ch',
   };
   

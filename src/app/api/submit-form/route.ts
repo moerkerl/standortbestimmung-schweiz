@@ -4,9 +4,7 @@ import { hubspotService, mapPortalDataToHubSpot } from '@/lib/hubspotService';
 
 interface FormData {
   schueler: string;
-  klasse: string;
-  fach: string;
-  plz: string;
+  alter: string;
   nachname: string;
   telefon: string;
   email: string;
@@ -58,7 +56,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<SubmitFor
     const formData: FormData = await request.json();
     
     // Validate required fields
-    const requiredFields: (keyof FormData)[] = ['schueler', 'klasse', 'fach', 'plz', 'nachname', 'telefon', 'email'];
+    const requiredFields: (keyof FormData)[] = ['schueler', 'alter', 'nachname', 'telefon', 'email'];
     for (const field of requiredFields) {
       if (!formData[field]) {
         // Missing required field
