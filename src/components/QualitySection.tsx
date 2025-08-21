@@ -1,8 +1,29 @@
 'use client'
 
+import { useState } from 'react'
 import Image from 'next/image'
 
 export default function QualitySection() {
+  const [selectedTest, setSelectedTest] = useState<'deutsch12' | 'mathe12' | 'mathe5'>('deutsch12')
+  
+  const testExamples = {
+    deutsch12: {
+      title: 'Deutsch 1./2. Klasse',
+      image: '/images/schreibauftrag 1.+2. klasse Deutsch.jpg',
+      alt: 'Schreibauftrag Deutsch 1./2. Klasse'
+    },
+    mathe12: {
+      title: 'Mathe 1./2. Klasse',
+      image: '/images/mathe 1+2. klasse übung.jpg',
+      alt: 'Mathematik Übung 1./2. Klasse'
+    },
+    mathe5: {
+      title: 'Mathe 5. Klasse',
+      image: '/images/mathe 5. klasse übung.jpg',
+      alt: 'Mathematik Übung 5. Klasse'
+    }
+  }
+
   return (
     <section className="py-16 bg-gradient-to-br from-blue-50 to-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -83,13 +104,34 @@ export default function QualitySection() {
             <div className="text-center mb-6">
               <h4 className="text-xl font-bold text-gray-900 mb-4">Beispiele unserer Tests</h4>
               <div className="flex justify-center gap-2 mb-6">
-                <button className="px-4 py-2 bg-[#ff6b35] text-white rounded-lg text-sm font-medium">
+                <button 
+                  onClick={() => setSelectedTest('deutsch12')}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors cursor-pointer ${
+                    selectedTest === 'deutsch12' 
+                      ? 'bg-[#ff6b35] text-white' 
+                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                  }`}
+                >
                   Deutsch 1./2. Klasse
                 </button>
-                <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-300">
+                <button 
+                  onClick={() => setSelectedTest('mathe12')}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors cursor-pointer ${
+                    selectedTest === 'mathe12' 
+                      ? 'bg-[#ff6b35] text-white' 
+                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                  }`}
+                >
                   Mathe 1./2. Klasse
                 </button>
-                <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-300">
+                <button 
+                  onClick={() => setSelectedTest('mathe5')}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors cursor-pointer ${
+                    selectedTest === 'mathe5' 
+                      ? 'bg-[#ff6b35] text-white' 
+                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                  }`}
+                >
                   Mathe 5. Klasse
                 </button>
               </div>
@@ -100,11 +142,13 @@ export default function QualitySection() {
               <div className="bg-gray-900 rounded-3xl p-4 shadow-2xl">
                 <div className="bg-white rounded-2xl overflow-hidden">
                   <Image 
-                    src="/images/schreibauftrag 1.+2. klasse Deutsch.jpg" 
-                    alt="Schreibauftrag Deutsch 1./2. Klasse" 
+                    src={testExamples[selectedTest].image} 
+                    alt={testExamples[selectedTest].alt} 
                     width={400}
                     height={256}
-                    className="w-full h-64 object-cover"
+                    className={`w-full h-64 ${
+                      selectedTest === 'mathe5' ? 'object-contain bg-white' : 'object-cover'
+                    }`}
                   />
                 </div>
               </div>
