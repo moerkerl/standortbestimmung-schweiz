@@ -245,7 +245,7 @@ export default function LandingPageV2Client() {
             </div>
           </div>
           
-          <div className="bg-gradient-to-br from-gray-100 to-gray-50 rounded-3xl p-10 border-2 border-gray-200">
+          <div className="bg-gradient-to-br from-orange-50 to-orange-100/50 rounded-3xl p-10 border-2 border-orange-200">
             <h3 className="text-2xl font-bold mb-8 text-center text-gray-900">
               <span className="text-[#ff6b35]">📌</span> Besonders wertvoll für:
             </h3>
