@@ -245,43 +245,43 @@ export default function LandingPageV2Client() {
             </div>
           </div>
           
-          <div className="bg-gradient-to-r from-[#ff6b35] to-[#e55a2b] rounded-3xl p-10 text-white">
-            <h3 className="text-2xl font-bold mb-8 text-center">
-              📌 Besonders wertvoll für:
+          <div className="bg-gradient-to-br from-gray-100 to-gray-50 rounded-3xl p-10 border-2 border-gray-200">
+            <h3 className="text-2xl font-bold mb-8 text-center text-gray-900">
+              <span className="text-[#ff6b35]">📌</span> Besonders wertvoll für:
             </h3>
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white/10 backdrop-blur rounded-xl p-6">
-                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+              <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#ff6b35] to-[#e55a2b] rounded-full flex items-center justify-center mb-4 mx-auto">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h4 className="font-semibold mb-2 text-center">Internationale Familien & Expats</h4>
-                <p className="text-white/90 text-sm text-center">
+                <h4 className="font-semibold mb-2 text-center text-gray-900">Internationale Familien & Expats</h4>
+                <p className="text-gray-600 text-sm text-center">
                   Verstehen Sie das Schweizer Schulsystem und finden Sie die richtige Einstufung.
                 </p>
               </div>
               
-              <div className="bg-white/10 backdrop-blur rounded-xl p-6">
-                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+              <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#ff6b35] to-[#e55a2b] rounded-full flex items-center justify-center mb-4 mx-auto">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
                   </svg>
                 </div>
-                <h4 className="font-semibold mb-2 text-center">Bei Schulwechsel oder Umzug</h4>
-                <p className="text-white/90 text-sm text-center">
+                <h4 className="font-semibold mb-2 text-center text-gray-900">Bei Schulwechsel oder Umzug</h4>
+                <p className="text-gray-600 text-sm text-center">
                   Sichern Sie einen nahtlosen Übergang und die richtige Klasseneinstufung.
                 </p>
               </div>
               
-              <div className="bg-white/10 backdrop-blur rounded-xl p-6">
-                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+              <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#ff6b35] to-[#e55a2b] rounded-full flex items-center justify-center mb-4 mx-auto">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
                 </div>
-                <h4 className="font-semibold mb-2 text-center">Bei Leistungsschwankungen</h4>
-                <p className="text-white/90 text-sm text-center">
+                <h4 className="font-semibold mb-2 text-center text-gray-900">Bei Leistungsschwankungen</h4>
+                <p className="text-gray-600 text-sm text-center">
                   Erkennen Sie rechtzeitig Förderbedarf und nutzen Sie das volle Potenzial.
                 </p>
               </div>
