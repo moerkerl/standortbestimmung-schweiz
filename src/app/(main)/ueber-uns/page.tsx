@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import TeamSection from '@/components/TeamSection'
+import Image from 'next/image'
 import PhilosophySection from '@/components/PhilosophySection'
 import PartnerSection from '@/components/PartnerSection'
 
@@ -11,70 +11,122 @@ export const metadata: Metadata = {
 export default function UeberUnsPage() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-orange-50 to-white py-20 lg:py-24 mt-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Über uns
-          </h1>
-          <p className="text-xl text-gray-600 leading-relaxed">
-            Erfahren Sie mehr über unser Team, unsere Werte und unsere Partner. 
-            Wir sind Ihr kompetenter Ansprechpartner für professionelle Standortbestimmungen in der Schweiz.
+      {/* Expert Section - Ihre Fachpersonen */}
+      <section className="py-20 bg-white mt-16">
+        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center text-gray-900 mb-4">
+            Ihre Fachpersonen für professionelle Standortbestimmungen
+          </h2>
+          <p className="text-xl text-gray-600 text-center mb-12">
+            Zwei erfahrene Pädagoginnen - Ein Ziel: Die optimale Förderung Ihres Kindes
           </p>
+          
+          {/* Expert Cards Horizontal */}
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
+            {/* Nicole Benjamin */}
+            <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
+                <div className="relative w-32 h-32 flex-shrink-0">
+                  <Image
+                    src="/images/Nicole_Benjamin.jpg"
+                    alt="Nicole Benjamin"
+                    fill
+                    className="object-cover rounded-full border-4 border-[#ff6b35]"
+                  />
+                </div>
+                <div className="text-center md:text-left">
+                  <div className="inline-block bg-gradient-to-r from-[#ff6b35] to-[#e55a2b] text-white text-sm font-semibold px-4 py-1 rounded-full mb-4">
+                    Primarstufe
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Nicole Benjamin</h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Erfahrene Klassenlehrerin mit Expertise in Lernstandsanalysen und 
+                    besonderem Fokus auf Kinder mit Lernschwierigkeiten im Primarschulalter.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Nadja Ritter */}
+            <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
+                <div className="relative w-32 h-32 flex-shrink-0">
+                  <Image
+                    src="/images/Nadja_Ritter.jpg"
+                    alt="Nadja Ritter"
+                    fill
+                    className="object-cover rounded-full border-4 border-[#ff6b35]"
+                  />
+                </div>
+                <div className="text-center md:text-left">
+                  <div className="inline-block bg-gradient-to-r from-[#ff6b35] to-[#e55a2b] text-white text-sm font-semibold px-4 py-1 rounded-full mb-4">
+                    Sekundarstufe
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Nadja Ritter</h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Erfahrene Klassenlehrerin mit Expertise in Lernstandsanalysen und 
+                    besonderem Fokus auf Jugendliche mit Lernschwierigkeiten.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Intro Text */}
+          <div className="max-w-5xl mx-auto text-center">
+            <p className="text-gray-700 mb-6 leading-relaxed text-lg">
+              Für die Durchführung Ihrer Standortbestimmung stehen Ihnen unsere erfahrenen Fachpersonen <strong>Nicole Benjamin</strong> und <strong>Nadja Ritter</strong> zur Verfügung. 
+              Beide sind erfahrene Klassenlehrerinnen mit Spezialisierung auf Lernstandsanalysen und der Förderung von Kindern mit Lernschwierigkeiten.
+            </p>
+            <p className="text-gray-700 leading-relaxed text-lg">
+              Nicole begleitet Ihr Kind durch die wichtigen Grundschuljahre (Kindergarten bis 6. Klasse), während Nadja Jugendliche in der herausfordernden Sekundarschulzeit 
+              (7. bis 9. Klasse) unterstützt. Beide Expertinnen verbindet ihre Leidenschaft für individuelle Förderung und ihr fundiertes Wissen in der Durchführung 
+              professioneller Lernstandsanalysen.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Team Section */}
-      <TeamSection />
-
       {/* Purpose Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-4">
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-gray-900 text-center mb-4">
             Warum es uns gibt
           </h2>
-          <p className="text-lg text-gray-600 text-center mb-12">
+          <p className="text-xl text-gray-600 text-center mb-12">
             Geboren aus der Erfahrung von hunderten erfolgreichen Nachhilfefällen
           </p>
           
-          <div className="bg-gradient-to-br from-orange-50 to-white rounded-2xl p-8 mb-12">
+          <div className="bg-white rounded-2xl p-8 mb-12 shadow-lg">
             <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-[#ff6b35] rounded-full flex items-center justify-center">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
+              <div className="w-16 h-16 bg-gradient-to-br from-[#ff6b35] to-[#e55a2b] rounded-full flex items-center justify-center">
+                <i className="fas fa-graduation-cap text-3xl text-white"></i>
               </div>
             </div>
-            <p className="text-gray-700 leading-relaxed text-center mb-6">
-              <strong>Standortbestimmung-Schweiz.ch</strong> ist eine spezialisierte Dienstleistung der{' '}
-              <strong>Bildungsinstitut Fokus AG</strong>, einem der führenden Nachhilfeunternehmen in der Schweiz. 
-              Durch unsere langjährige Erfahrung mit hunderten von Schülerinnen und Schülern haben wir ein 
-              wiederkehrendes Bedürfnis erkannt: Viele Familien wissen nicht genau, wo ihr Kind schulisch steht.
+            <p className="text-gray-700 leading-relaxed text-center text-lg">
+              <strong>Standortbestimmung-Schweiz.ch</strong> ist eine spezialisierte Dienstleistung der <strong>Bildungsinstitut Fokus AG</strong>, einem der führenden Nachhilfeunternehmen in der Schweiz. 
+              Durch unsere langjährige Erfahrung mit hunderten von Schülerinnen und Schülern haben wir ein wiederkehrendes Bedürfnis erkannt: Viele Familien wissen nicht genau, wo ihr Kind schulisch steht.
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-xl p-6 shadow-lg">
-              <div className="w-12 h-12 bg-[#ff6b35] rounded-full flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
+            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-14 h-14 bg-gradient-to-br from-[#ff6b35] to-[#e55a2b] rounded-full flex items-center justify-center mb-6">
+                <i className="fas fa-search text-2xl text-white"></i>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Wissenslücken aufdecken</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Wissenslücken aufdecken</h3>
+              <p className="text-gray-600 leading-relaxed text-lg">
                 Wir identifizieren präzise, wo Nachholbedarf besteht und erstellen einen klaren Plan, 
-                um diese Lücken systematisch zu schließen. So wird aus Unsicherheit ein konkreter Weg nach vorne.
+                um diese Lücken systematisch zu schliessen. So wird aus Unsicherheit ein konkreter Weg nach vorne.
               </p>
             </div>
             
-            <div className="bg-white rounded-xl p-6 shadow-lg">
-              <div className="w-12 h-12 bg-[#ff6b35] rounded-full flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
+            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-14 h-14 bg-gradient-to-br from-[#ff6b35] to-[#e55a2b] rounded-full flex items-center justify-center mb-6">
+                <i className="fas fa-chart-line text-2xl text-white"></i>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Realistische Perspektiven</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Realistische Perspektiven</h3>
+              <p className="text-gray-600 leading-relaxed text-lg">
                 Eltern und Kinder erhalten eine objektive Einschätzung, wo sie im Vergleich zu anderen stehen und 
                 welche schulischen Laufbahnen realistisch möglich sind - fundiert und ehrlich.
               </p>
@@ -82,11 +134,84 @@ export default function UeberUnsPage() {
           </div>
           
           <div className="mt-12 text-center">
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
               Aus dieser Erkenntnis heraus haben wir die professionelle Standortbestimmung entwickelt - ein strukturiertes 
               Verfahren, das Klarheit schafft und Familien die Sicherheit gibt, die richtigen Entscheidungen für die 
               schulische Zukunft zu treffen.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section - Unser Kernteam */}
+      <section className="py-16 bg-white">
+        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center text-gray-900 mb-4">
+            Unser Kernteam
+          </h2>
+          <p className="text-lg text-gray-600 text-center mb-12 max-w-5xl mx-auto leading-relaxed">
+            Unser Kernteam besteht aus erfahrenen Fachpersonen, die Sie kompetent durch den gesamten Prozess der Standortbestimmung begleiten. 
+            Nicole Benjamin und Nadja Ritter sind unsere Expertinnen für die Durchführung und Auswertung der Standortbestimmungstests. 
+            Sie werden unterstützt von Tabea Glünkin und Ciril Bullinger, die für die Organisation, Koordination und administrative Betreuung zuständig sind. 
+            Gemeinsam sorgen wir dafür, dass die Standortbestimmung professionell durchgeführt wird und Sie eine fundierte Analyse des Lernstands Ihres Kindes erhalten.
+          </p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Tabea Glünkin */}
+            <div className="text-center">
+              <div className="relative w-48 h-48 mx-auto mb-4">
+                <Image
+                  src="/images/Tabea_Gluenkin.jpg"
+                  alt="Tabea Glünkin"
+                  fill
+                  className="object-cover rounded-full shadow-lg"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Tabea Glünkin</h3>
+              <p className="text-gray-600">Koordination und Betreuung</p>
+            </div>
+            
+            {/* Ciril Bullinger */}
+            <div className="text-center">
+              <div className="relative w-48 h-48 mx-auto mb-4">
+                <Image
+                  src="/images/Ciril_Bullinger.jpg"
+                  alt="Ciril Bullinger"
+                  fill
+                  className="object-cover rounded-full shadow-lg"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Ciril Bullinger</h3>
+              <p className="text-gray-600">Administration und Support</p>
+            </div>
+            
+            {/* Nicole Benjamin */}
+            <div className="text-center">
+              <div className="relative w-48 h-48 mx-auto mb-4">
+                <Image
+                  src="/images/Nicole_Benjamin.jpg"
+                  alt="Nicole Benjamin"
+                  fill
+                  className="object-cover rounded-full shadow-lg"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Nicole Benjamin</h3>
+              <p className="text-gray-600">Standortbestimmungs-Expertin</p>
+            </div>
+            
+            {/* Nadja Ritter */}
+            <div className="text-center">
+              <div className="relative w-48 h-48 mx-auto mb-4">
+                <Image
+                  src="/images/Nadja_Ritter.jpg"
+                  alt="Nadja Ritter"
+                  fill
+                  className="object-cover rounded-full shadow-lg"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Nadja Ritter</h3>
+              <p className="text-gray-600">Standortbestimmungs-Expertin</p>
+            </div>
           </div>
         </div>
       </section>
@@ -99,59 +224,56 @@ export default function UeberUnsPage() {
 
       {/* Contact Section */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Kontaktieren Sie uns</h2>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">Kontaktieren Sie uns</h2>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-              <div className="w-12 h-12 bg-[#ff6b35] rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
+            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-14 h-14 bg-gradient-to-br from-[#ff6b35] to-[#e55a2b] rounded-full flex items-center justify-center mx-auto mb-6">
+                <i className="fas fa-envelope text-2xl text-white"></i>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Per E-Mail kontaktieren</h3>
-              <p className="text-gray-600 mb-4 text-sm">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">Per E-Mail kontaktieren</h3>
+              <p className="text-gray-600 mb-6 text-center">
                 Melden Sie sich bei jeglichen Fragen gerne bei uns. Wir helfen Ihnen schnell und unkompliziert weiter.
               </p>
-              <a 
-                href="mailto:info@standortbestimmung-schweiz.ch" 
-                className="text-[#ff6b35] font-medium hover:underline"
-              >
-                info@standortbestimmung-schweiz.ch
-              </a>
+              <div className="text-center">
+                <a 
+                  href="mailto:info@standortbestimmung-schweiz.ch" 
+                  className="text-[#ff6b35] font-semibold hover:text-[#e55a2b] transition-colors text-lg"
+                >
+                  info@standortbestimmung-schweiz.ch
+                </a>
+              </div>
             </div>
             
-            <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-              <div className="w-12 h-12 bg-[#ff6b35] rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
+            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-14 h-14 bg-gradient-to-br from-[#ff6b35] to-[#e55a2b] rounded-full flex items-center justify-center mx-auto mb-6">
+                <i className="fas fa-file-alt text-2xl text-white"></i>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Kontaktanfrage stellen</h3>
-              <p className="text-gray-600 mb-4 text-sm">
-                Wenn Sie sich über Details zur Standortbestimmung austauschen möchten, nutzen Sie gerne unser Formular.
+              <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">Kontaktanfrage stellen</h3>
+              <p className="text-gray-600 mb-6 text-center">
+                Wenn Sie sich über Details zur Nachhilfe austauschen möchten, nutzen Sie gerne unser Formular. Wir melden uns zeitnah bei Ihnen und beraten Sie persönlich zu Ihren Fragen und Wünschen.
               </p>
-              <a 
-                href="/standortbestimmung-anfragen" 
-                className="inline-block bg-[#ff6b35] text-white px-4 py-2 rounded-lg hover:bg-[#e55a2b] transition-colors text-sm font-medium"
-              >
-                Jetzt Kontaktanfrage stellen
-              </a>
+              <div className="text-center">
+                <a 
+                  href="/standortbestimmung-anfragen" 
+                  className="inline-block bg-[#ff6b35] text-white px-6 py-3 rounded-lg hover:bg-[#e55a2b] transition-colors font-semibold shadow-lg"
+                >
+                  Jetzt Kontaktanfrage stellen
+                </a>
+              </div>
             </div>
             
-            <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-              <div className="w-12 h-12 bg-[#ff6b35] rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
+            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-14 h-14 bg-gradient-to-br from-[#ff6b35] to-[#e55a2b] rounded-full flex items-center justify-center mx-auto mb-6">
+                <i className="fas fa-map-marker-alt text-2xl text-white"></i>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Unser Standort in Zürich</h3>
-              <p className="text-gray-600 mb-4 text-sm">Besuchen Sie uns an unserem Hauptsitz in Zürich:</p>
-              <div className="text-gray-700 text-sm">
-                <strong>Bildungsinstitut Fokus AG</strong><br />
-                Staffelstrasse 8<br />
-                8045 Zürich
+              <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">Unser Standort in Zürich</h3>
+              <p className="text-gray-600 mb-6 text-center">Besuchen Sie uns an unserem Hauptsitz in Zürich:</p>
+              <div className="text-gray-700 text-center">
+                <strong className="text-lg">Bildungsinstitut Fokus AG</strong><br />
+                <span className="text-gray-600">Staffelstrasse 8<br />
+                8045 Zürich</span>
               </div>
             </div>
           </div>
