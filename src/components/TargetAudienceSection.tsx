@@ -66,8 +66,8 @@ export default function TargetAudienceSection() {
         </div>
 
         {/* Special Groups */}
-        <div className="bg-gradient-to-r from-[#ff6b35] to-[#e55a2b] rounded-3xl p-10 shadow-xl">
-          <h3 className="text-3xl font-bold text-white text-center mb-10">
+        <div className="bg-gradient-to-br from-orange-50 to-orange-100/50 rounded-3xl p-10 shadow-xl border-2 border-orange-200">
+          <h3 className="text-3xl font-bold text-gray-900 text-center mb-10">
             Besonders wertvoll für:
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
