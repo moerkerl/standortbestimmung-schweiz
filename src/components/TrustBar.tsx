@@ -23,15 +23,15 @@ export default function TrustBar() {
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="trust-items grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {trustItems.map((item, index) => (
-            <div key={index} className="trust-item bg-white rounded-xl p-4 shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
-              <div className="flex items-center gap-4">
-                <i className={`fas ${item.icon} text-[#ff6b35] text-2xl flex-shrink-0`}></i>
-                <span className="text-sm text-gray-700">
-                  <strong className="block">{item.text.split(' - ')[0]}</strong>
+            <div key={index} className="trust-item bg-white rounded-xl p-6 shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+              <div className="flex flex-col items-center text-center gap-3">
+                <i className={`fas ${item.icon} text-[#ff6b35] text-3xl`}></i>
+                <div className="text-gray-700">
+                  <strong className="block text-base mb-1">{item.text.split(' - ')[0]}</strong>
                   {item.text.includes(' - ') && (
-                    <span className="text-gray-600 text-xs">{item.text.split(' - ')[1]}</span>
+                    <span className="text-gray-600 text-sm">{item.text.split(' - ')[1]}</span>
                   )}
-                </span>
+                </div>
               </div>
             </div>
           ))}
