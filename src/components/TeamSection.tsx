@@ -38,7 +38,7 @@ export default function TeamSection() {
                 />
               </div>
               <div className="p-8 md:w-2/3">
-                <div className="inline-block bg-gradient-to-r from-green-500 to-green-600 text-white text-sm font-semibold px-4 py-1 rounded-full mb-4">
+                <div className="inline-block bg-gradient-to-r from-[#ff6b35] to-[#e55a2b] text-white text-sm font-semibold px-4 py-1 rounded-full mb-4">
                   Primarstufe
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-3">Nicole Benjamin</h3>
@@ -62,7 +62,7 @@ export default function TeamSection() {
                 />
               </div>
               <div className="p-8 md:w-2/3">
-                <div className="inline-block bg-gradient-to-r from-blue-500 to-blue-600 text-white text-sm font-semibold px-4 py-1 rounded-full mb-4">
+                <div className="inline-block bg-gradient-to-r from-[#ff6b35] to-[#e55a2b] text-white text-sm font-semibold px-4 py-1 rounded-full mb-4">
                   Sekundarstufe
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-3">Nadja Ritter</h3>
