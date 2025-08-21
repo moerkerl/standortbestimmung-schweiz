@@ -187,7 +187,7 @@ export default function LandingPageV2Client() {
           <div className="text-center">
             <button 
               onClick={() => router.push('/standortbestimmung-anfragen')}
-              className="bg-[#ff6b35] text-white px-8 py-4 rounded-lg hover:bg-[#e55a2b] transition-colors font-semibold text-lg shadow-lg"
+              className="bg-[#ff6b35] text-white px-8 py-4 rounded-lg hover:bg-[#e55a2b] transition-colors font-semibold text-lg shadow-lg cursor-pointer"
             >
               Jetzt Standortbestimmung starten
             </button>
@@ -356,7 +356,7 @@ export default function LandingPageV2Client() {
             
             <button 
               onClick={() => router.push('/standortbestimmung-anfragen')}
-              className="bg-white text-[#ff6b35] px-10 py-5 rounded-lg hover:bg-gray-100 transition-colors font-bold text-lg shadow-lg transform hover:scale-105"
+              className="bg-white text-[#ff6b35] px-10 py-5 rounded-lg hover:bg-gray-100 transition-colors font-bold text-lg shadow-lg transform hover:scale-105 cursor-pointer"
             >
               Jetzt Standortbestimmung starten
             </button>
