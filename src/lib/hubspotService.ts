@@ -5,6 +5,7 @@
 
 interface HubSpotContactData {
   email: string;
+  firstname: string;
   lastname: string;
   phone: string;
   funktion?: string;
@@ -31,6 +32,7 @@ interface HubSpotAPIResponse {
 interface PortalFormData {
   schueler: string;
   alter: string;
+  vorname: string;
   nachname: string;
   telefon: string;
   email: string;
@@ -269,6 +271,7 @@ export const hubspotService = HubSpotService.getInstance();
 export function mapPortalDataToHubSpot(data: PortalFormData): HubSpotContactData {
   const hubspotData: HubSpotContactData = {
     email: data.email,
+    firstname: data.vorname,
     lastname: data.nachname,
     phone: data.telefon,
     funktion: 'Kunde / Schüler',

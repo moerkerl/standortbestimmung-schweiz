@@ -36,6 +36,7 @@ const klassenOptions = [
 const initialState = {
   schueler: '',
   alter: '',
+  vorname: '',
   nachname: '',
   telefon: '',
   email: ''
@@ -96,7 +97,7 @@ export default function MultiStepForm() {
     setError('')
     
     // Validierung
-    if (!form.nachname || !form.telefon || !form.email) {
+    if (!form.vorname || !form.nachname || !form.telefon || !form.email) {
       setError('Bitte füllen Sie alle Felder aus.')
       return
     }
@@ -236,16 +237,30 @@ export default function MultiStepForm() {
           </p>
           
           <div className="space-y-4">
-            <div>
-              <label className="block text-gray-700 mb-2">Nachname *</label>
-              <input 
-                name="nachname" 
-                value={form.nachname} 
-                onChange={handleChange}
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[#ff6b35] focus:outline-none text-gray-700"
-                placeholder="Ihr Nachname"
-                required
-              />
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-gray-700 mb-2">Vorname *</label>
+                <input 
+                  name="vorname" 
+                  value={form.vorname} 
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[#ff6b35] focus:outline-none text-gray-700"
+                  placeholder="Ihr Vorname"
+                  required
+                />
+              </div>
+              
+              <div>
+                <label className="block text-gray-700 mb-2">Nachname *</label>
+                <input 
+                  name="nachname" 
+                  value={form.nachname} 
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[#ff6b35] focus:outline-none text-gray-700"
+                  placeholder="Ihr Nachname"
+                  required
+                />
+              </div>
             </div>
             
             <div>
