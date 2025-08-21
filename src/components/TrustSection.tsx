@@ -47,7 +47,7 @@ export default function TrustSection() {
         <div className="grid md:grid-cols-3 gap-8">
           {trustPoints.map((point, index) => (
             <div key={index} className="bg-gradient-to-br from-orange-50 to-white rounded-xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-[#ff6b35] rounded-full flex items-center justify-center mx-auto mb-6 text-white">
+              <div className="w-16 h-16 flex items-center justify-center mx-auto mb-6 text-[#ff6b35]">
                 {point.icon}
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">{point.title}</h3>
