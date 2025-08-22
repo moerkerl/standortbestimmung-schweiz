@@ -2,7 +2,6 @@
 
 import { useRouter } from 'next/navigation'
 import LPHero from '@/components/LPHero'
-import TrustBar from '@/components/TrustBar'
 import LPBenefits from '@/components/LPBenefits'
 import LPSection from '@/components/LPSection'
 import LPSteps from '@/components/LPSteps'
@@ -100,8 +99,6 @@ export default function LandingPageV3Client() {
         imageAlt="Professionelle Standortbestimmung für Ihr Kind"
       />
 
-      {/* Trust Bar - NEW */}
-      <TrustBar />
 
       {/* Benefits */}
       <LPBenefits benefits={benefits} />
