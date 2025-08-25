@@ -30,7 +30,8 @@ const klassenOptions = [
   'Studium',
   'Berufsschule',
   'Fachhochschule',
-  'Universität'
+  'Universität',
+  'Sonstiges'
 ]
 
 const initialState = {
@@ -154,7 +155,7 @@ export default function MultiStepForm() {
       {step === 1 && (
         <form onSubmit={handleNext}>
           <h2 className="text-2xl font-bold mb-6 text-gray-900">
-            Wer braucht Nachhilfe?
+            Um wen geht es?
           </h2>
           <div className="grid grid-cols-1 gap-3 mb-6">
             {['Meine Tochter', 'Mein Sohn', 'Ich', 'Jemand anderes'].map((option, index) => (
